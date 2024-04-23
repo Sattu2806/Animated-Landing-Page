@@ -54,6 +54,6 @@ const HeroAnimation = React.forwardRef<HTMLDivElement, Props>(
 }
 )
 
-// HeroAnimation.displayName = 'HeroAnimation'; // Setting the display name
+HeroAnimation.displayName = 'HeroAnimation'; // Setting the display name
 
 export default HeroAnimation;
