@@ -39,7 +39,7 @@ const HeroAnimation = React.forwardRef<HTMLDivElement, Props>(
                 <span key={index} className='whitespace-nowrap' style={{overflow:'hidden'}}>
                     {word.map((element, charIndex) => (
                         <span key={charIndex} style={{overflow:'hidden', display:'inline-block'}}>
-                            <motion.span variants={item} initial='hidden' animate='visible' className={cn("hello", className)} 
+                            <motion.span variants={item}  className={cn("hello", className)} 
                             style={{display:'inline-block'}}
                             >
                                 {element}
@@ -54,6 +54,6 @@ const HeroAnimation = React.forwardRef<HTMLDivElement, Props>(
 }
 )
 
-HeroAnimation.displayName = 'HeroAnimation'; // Setting the display name
+// HeroAnimation.displayName = 'HeroAnimation'; // Setting the display name
 
 export default HeroAnimation;
