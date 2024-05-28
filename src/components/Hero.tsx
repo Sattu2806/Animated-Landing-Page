@@ -64,55 +64,25 @@ function Hero({}: Props) {
 						{/* <span className='text-transparent bg-clip-text bg-gradient-to-br from-violet-400 to-violet-600 inline-block'>do clustering</span>
                     <span className='text-transparent bg-clip-text bg-gradient-to-br from-white to-zinc-300 inline-block'>in TypeScript</span> */}
 					</motion.h1>
-					<motion.ul
-						initial="hidden"
-						animate="visible"
-						variants={wrapper}
-						className="text-white space-y-2"
+
+					<motion.div
+						initial={{ opacity: 0, scale: 0.7 }}
+						whileInView={{ opacity: 1, scale: 1 }}
+						viewport={{ once: true }}
+						transition={{ delay: 0.5, duration: 0.5 }}
 					>
-						<motion.li variants={list} className="flex gap-3">
-							<svg
-								xmlns="http://www.w3.org/2000/svg"
-								viewBox="0 0 512 512"
-								className="fill-current h-5 shrink-0 mt-0.5"
-							>
-								<path d="M256 32a224 224 0 1 1 0 448 224 224 0 1 1 0-448zm0 480A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM363.3 203.3c6.2-6.2 6.2-16.4 0-22.6s-16.4-6.2-22.6 0L224 297.4l-52.7-52.7c-6.2-6.2-16.4-6.2-22.6 0s-6.2 16.4 0 22.6l64 64c6.2 6.2 16.4 6.2 22.6 0l128-128z"></path>
-							</svg>
-							<span>Maximum Type-safety (incl. error handling)</span>
-						</motion.li>
-						<motion.li variants={list} className="flex gap-3">
-							<svg
-								xmlns="http://www.w3.org/2000/svg"
-								viewBox="0 0 512 512"
-								className="fill-current h-5 shrink-0 mt-0.5"
-							>
-								<path d="M256 32a224 224 0 1 1 0 448 224 224 0 1 1 0-448zm0 480A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM363.3 203.3c6.2-6.2 6.2-16.4 0-22.6s-16.4-6.2-22.6 0L224 297.4l-52.7-52.7c-6.2-6.2-16.4-6.2-22.6 0s-6.2 16.4 0 22.6l64 64c6.2 6.2 16.4 6.2 22.6 0l128-128z"></path>
-							</svg>
-							<span>
-								Makes your code more composable, reusable and testable
-							</span>
-						</motion.li>
-						<motion.li variants={list} className="flex gap-3">
-							<svg
-								xmlns="http://www.w3.org/2000/svg"
-								viewBox="0 0 512 512"
-								className="fill-current h-5 shrink-0 mt-0.5"
-							>
-								<path d="M256 32a224 224 0 1 1 0 448 224 224 0 1 1 0-448zm0 480A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM363.3 203.3c6.2-6.2 6.2-16.4 0-22.6s-16.4-6.2-22.6 0L224 297.4l-52.7-52.7c-6.2-6.2-16.4-6.2-22.6 0s-6.2 16.4 0 22.6l64 64c6.2 6.2 16.4 6.2 22.6 0l128-128z"></path>
-							</svg>
-							<span>Extensive library with a rich ecosystem of packages</span>
-						</motion.li>
-						<motion.li variants={list} className="flex gap-3">
-							<svg
-								xmlns="http://www.w3.org/2000/svg"
-								viewBox="0 0 512 512"
-								className="fill-current h-5 shrink-0 mt-0.5"
-							>
-								<path d="M256 32a224 224 0 1 1 0 448 224 224 0 1 1 0-448zm0 480A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM363.3 203.3c6.2-6.2 6.2-16.4 0-22.6s-16.4-6.2-22.6 0L224 297.4l-52.7-52.7c-6.2-6.2-16.4-6.2-22.6 0s-6.2 16.4 0 22.6l64 64c6.2 6.2 16.4 6.2 22.6 0l128-128z"></path>
-							</svg>
-							<span>Clustering and Workflows (Alpha)</span>
-						</motion.li>
-					</motion.ul>
+						<motion.p
+							initial={{ opacity: 0, y: 20 }}
+							animate={{ opacity: 1, y: 0 }}
+							transition={{ duration: 0.5, delay: 1 }}
+							className="text-lg text-gray-500 mb-6"
+						>
+							We deliver gas to your doorstep at the best price. Order now and get it delivered
+							in 30 minutes.
+
+						</motion.p>
+					</motion.div>
+
 					<motion.div
 						initial={{ opacity: 0 }}
 						animate={{ opacity: 1 }}
@@ -143,9 +113,9 @@ function Hero({}: Props) {
 						transition={{ duration: 0.5, delay: 1.5 }}
 						className="relative"
 					>
-						<div className="relative p-px overflow-hidden rounded-3xl sm:rounded-[2rem] bg-gradient-to-br from-white to-zinc-600">
-							<div className="rounded-3xl sm:rounded-[31px] overflow-hidden p-1.5 bg-gradient-to-br from-zinc-400 to-zinc-700">
-								<div className="rounded-[17px] sm:rounded-[25px] overflow-hidden bg-gradient-to-br from-zinc-800 to-zinc-950">
+						<div className="relative p-px overflow-hidden  rounded-3xl sm:rounded-[2rem] ">
+							<div className="rounded-3xl sm:rounded-[31px] h-[28rem] max-h-96 overflow-hidden p-1.5 ">
+								<div className="rounded-[17px] sm:rounded-[25px] h-[27rem] overflow-hidden bg-gradient-to-br">
 									<Image
 										src="/image1.webp"
 										className="object-cover object-center"
