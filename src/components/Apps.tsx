@@ -19,13 +19,13 @@ function Apps({}: Props) {
     <motion.div ref={scrollref} style={{opacity , translateX}} className='relative my-4'>
         <div className='relative z-10 w-full max-w-screen-xl mx-auto px-4 sm:px-8 lg:px-16 py-20 grid grid-cols-1 md:grid-cols-2 gap-y-8 gap-x-24 lg:gap-x-40'>
             <div className='flex flex-col items-center gap-8'>
-                <p className='text-white'>Techy works everywhere:</p>
+                <p className='text-white'>Our patners:</p>
                 <div className='flex w-full justify-around md:justify-between'>
-                    <Image className='h-10 w-auto sm:h-12 saturate-0 hover:saturate-100 transition-all duration-300 cursor-pointer' src='/node.webp' alt='Node' width={114} height={102}/>
-                    <Image className='h-10 w-auto sm:h-12 saturate-0 hover:saturate-100 transition-all duration-300 cursor-pointer' src='/deno.png' alt='Node' width={114} height={102}/>
-                    <Image className='h-10 w-auto sm:h-12 saturate-0 hover:saturate-100 transition-all duration-300 cursor-pointer' src='/bun.png' alt='Node' width={114} height={102}/>
-                    <Image className='h-10 w-auto sm:h-12 saturate-0 hover:saturate-100 transition-all duration-300 cursor-pointer' src='/logo-4.png' alt='Node' width={114} height={102}/>
-                    <Image className='h-10 w-auto sm:h-12 saturate-0 hover:saturate-100 transition-all duration-300 cursor-pointer' src='/chrome.webp' alt='Node' width={114} height={102}/>
+                    <Image className='h-10 w-auto sm:h-12 transition-all duration-300 cursor-pointer' src='/northwest_logo.png' alt='Node' width={114} height={102}/>
+                    <Image className='h-10 w-auto sm:h-12  transition-all duration-300 cursor-pointer' src='/total-logo.png' alt='Node' width={114} height={102}/>
+                    <Image className='h-10 w-auto sm:h-12  transition-all duration-300 cursor-pointer' src='/MRS-logo.png' alt='Node' width={114} height={102}/>
+                    <Image className='h-10 w-auto sm:h-12  transition-all duration-300 cursor-pointer' src='/Oando-Logo.png' alt='Oando station' width={114} height={102}/>
+                   
                 </div>
             </div>
             <div className='flex flex-col items-center gap-8'>

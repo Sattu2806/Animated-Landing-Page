@@ -8,7 +8,7 @@ type Props = {};
 
 function Navbar({}: Props) {
 	return (
-		<div className="w-full max-w-screen-xl mx-auto px-4 sm:px-8 lg:px-16 pt-10 pb-5 flex items-center  font-light text-zinc-300 sticky top-0 backdrop-blur-md z-20">
+		<div className="w-full max-w-screen-xl mx-auto px-4 sm:px-8 lg:px-16 pt-10 pb-5 flex items-center  font-light text-zinc-300 sticky top-0 backdrop-blur-md z-40">
 			<div className="overflow-hidden ">
 				<motion.div
 					initial={{ opacity: 0, y: 100 }}

@@ -117,7 +117,7 @@ function Hero({}: Props) {
 							<div className="rounded-3xl sm:rounded-[31px] h-[28rem] max-h-96 overflow-hidden p-1.5 ">
 								<div className="rounded-[17px] sm:rounded-[25px] h-[27rem] overflow-hidden bg-gradient-to-br">
 									<Image
-										src="/image1.webp"
+										src="/truck.jpg"
 										className="object-cover object-center"
 										width={1000}
 										height={1000}
