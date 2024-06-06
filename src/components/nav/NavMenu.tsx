@@ -17,29 +17,29 @@ import Icon from "../Icon";
 
 const components: { title: string; href: string; description: string }[] = [
 	{
-		title: "Alert Dialog",
+		title: "On-Road Delivery",
 		href: "/docs/primitives/alert-dialog",
 		description:
-			"A modal dialog that interrupts the user with important content and expects a response.",
+			"Quit paying retail prices and wasting time at the gas stations waiting for your chance to fill up On-road assets rely on a constant supply of fuel to keep them moving, and our fuel delivery services ensure that they have the fuel they need when they need it.",
 	},
 	{
-		title: "Hover Card",
+		title: "Off-Road Delivery",
 		href: "/docs/primitives/hover-card",
 		description:
-			"For sighted users to preview content available behind a link.",
+			" Off-road assets are often being used in remote locations, far from conventional fueling stations, making fuel delivery a critical component of any off-road operation. ",
 	},
 	{
-		title: "Progress",
+		title: "Generator Delivery",
 		href: "/docs/primitives/progress",
 		description:
-			"Displays an indicator showing the completion progress of a task, typically displayed as a progress bar.",
+			"Fuel delivery ensures that generators have a continuous supply of fuel, reducing the risk of downtime and power outages. We can tailor our fuel delivery to your specific needs, providing either on-site or off-site deliveries.",
 	},
 	{
-		title: "Scroll-area",
+		title: "Emergency Delivery",
 		href: "/docs/primitives/scroll-area",
-		description: "Visually or semantically separates content.",
+		description:
+			"We provide emergency fuel delivery services to keep your business running in the event of a fuel shortage or emergency. Our team is available 24/7 to deliver fuel to your location when you need it most.",
 	},
-	
 ];
 
 export function NavMenu() {
@@ -61,25 +61,23 @@ export function NavMenu() {
 											Auto Refuel
 										</div>
 										<p className="text-sm leading-tight text-muted-foreground">
-											Beautifully designed components that you can copy and
-											paste into your apps. Accessible. Customizable. Open
-											Source.
+											We provide on-demand fuel delivery services to keep your
+											vehicles and equipment fueled up and ready to go.
 										</p>
 									</a>
 								</NavigationMenuLink>
 							</li>
-							<ListItem href="/docs" title="Introduction">
-								Re-usable components built using Radix UI and Tailwind CSS.
+							<ListItem href="/docs" title="About us">
+								Do you want to learn more about our services?
 							</ListItem>
-							<ListItem href="/docs/installation" title="Installation">
-								How to install dependencies and structure your app.
+							<ListItem href="/docs/installation" title="Customer service">
+								talk to a customer service representative
 							</ListItem>
-							
 						</ul>
 					</NavigationMenuContent>
 				</NavigationMenuItem>
 				<NavigationMenuItem>
-					<NavigationMenuTrigger>Components</NavigationMenuTrigger>
+					<NavigationMenuTrigger>Services</NavigationMenuTrigger>
 					<NavigationMenuContent>
 						<ul className="grid w-[400px] gap-3 p-4 md:w-[500px] backdrop-blur-2xl md:grid-cols-2 lg:w-[600px] ">
 							{components.map((component) => (
@@ -95,9 +93,9 @@ export function NavMenu() {
 					</NavigationMenuContent>
 				</NavigationMenuItem>
 				<NavigationMenuItem>
-					<Link href="/docs" legacyBehavior passHref>
+					<Link href="/booking" legacyBehavior passHref>
 						<NavigationMenuLink className={navigationMenuTriggerStyle()}>
-							Documentation
+							Book now
 						</NavigationMenuLink>
 					</Link>
 				</NavigationMenuItem>
