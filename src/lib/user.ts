@@ -19,7 +19,7 @@ export async function getUserById({
 }) {
 	try {
 		if (!id && !clerkId) {
-			throw new Error("id or clerkUserId is required");
+			throw new Error("id or clerkId is required");
 		}
 
 		const query = id ? { id } : { clerkId };
@@ -42,3 +42,29 @@ export async function UpdateUser(id: string, data: Partial<User>) {
 		return { error };
 	}
 }
+
+export async function deleteUser(id: string) {
+	try {
+		const user = await db.user.delete({ where: { id } });
+		return { user };
+	} catch (error) {
+		return { error };
+	}
+}
+
+//create order
+
+export async function createOrder(userId: string, amount: number) {
+	return await db.order.create({
+		data: {
+			amount: amount,
+			userId: userId,
+
+		},
+	});
+}
+
+export async function getOrderById(id: string) {
+	return await db.order.findUnique({ where: { id } });
+}
+

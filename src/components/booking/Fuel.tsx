@@ -2,13 +2,18 @@ import FuelType from "@/app/data/FuelType";
 import { AmountContext } from "@/context/AmountContext";
 import { DirectionDataContext } from "@/context/DirectionDataContext";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 import React, { useContext, useState } from "react";
+import { Button } from "../ui/button";
+import { Wallet } from "lucide-react";
+import axios from "axios";
 
 const Fuel = () => {
 	const [selectFuelType, setSelectFuelType] = useState<any>();
 	const [quantity, setQuantity] = useState<number>(0); // Add state for quantity
-	const { directionData, setDirecrtionData } = useContext(DirectionDataContext);
+	const { directionData, setDirectionData } = useContext(DirectionDataContext);
 	const { Amount, setAmount } = useContext(AmountContext);
+	const router: any = useRouter();
 
 	const formatCurrency = (amount: number) => {
 		return new Intl.NumberFormat("en-US", {
@@ -18,12 +23,12 @@ const Fuel = () => {
 	};
 
 	const getCost = (charges: any) => {
-		const cost = charges * quantity + directionData.routes[0].distance * 0.075;
+		const cost = charges * quantity + directionData.routes?.[0]?.distance * 0.075;
 		return formatCurrency(cost);
 	};
 
 	const getDeliveryFee = () => {
-		const fee = directionData.routes[0].distance * 0.075;
+		const fee = directionData.routes?.[0]?.distance * 0.075;
 		return formatCurrency(fee);
 	};
 
@@ -81,6 +86,29 @@ const Fuel = () => {
 					</div>
 				</div>
 			)}
+			<Button
+				className={`w-full text-slate-700 rounded-md mt-2 p-1 ${
+					selectFuelType
+						? "bg-yellow-500 hover:bg-yellow-600 cursor-pointer"
+						: "bg-gray-400 cursor-not-allowed"
+				}`}
+				disabled={!selectFuelType}
+				onClick={async () => {
+					// Send a POST request to the server with the selectedFuelType and amount
+					const response = await axios.post("/api/create-intent", {
+						fuelType: FuelType[selectFuelType].name,
+						amount: Amount,
+						liters: quantity,
+					});
+
+					// Check the response status and navigate to the payment page if successful
+					if (response.status === 200) {
+						router.push("/booking/payment");
+					}
+				}}
+			>
+				Pay now <Wallet className="h-4 w-4 ml-2" />
+			</Button>
 		</div>
 	);
 };
